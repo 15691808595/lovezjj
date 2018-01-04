@@ -61,7 +61,7 @@
 				right: 100px;
 			}
 			.fixBtn a{
-				color: white;
+				color: #e502ff;
 
 			}
 
@@ -297,7 +297,7 @@
             <li data-menuanchor="page8"><a href="#page8">第八屏</a></li>
         </ul>
 		<div class="fixBtn">
-			<a id="prev" href="#page1">上一个</a>
+			<!--<a id="prev" href="#page1">上一个</a>-->
 			<a id="next" href="#page2" data-letterfx="custom[0]">下一个</a>
 		</div>
 
@@ -308,21 +308,17 @@
         <!--<script src="js/3d/trackballcontrols.js"></script>-->
         <!--<script src="js/3d/css3drenderer.js"></script>-->
 		<script>
-			var num=1;
-            $("#prev").click(function () {
-                num--;
-                if(num<=0)num=1;
-                $(this).attr('href','#page'+num)
-            });
             $("#next").click(function () {
-                num++;
-                $(this).attr('href','#page'+num)
+                var nowUrl=location.href;
+                var lastStr=nowUrl.charAt(nowUrl.length-1);
+                if(lastStr==='l')lastStr='1';
+				var n=parseInt(lastStr)+1;
+				if(n>=8)n=8;
+                $(this).attr('href','#page'+n)
             });
 
 
             $("#menu .hide-words").click(function () {
-
-                console.log(123);
                 $(".five.words").fadeOut(500)
             })
 
