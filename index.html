@@ -310,7 +310,7 @@
 					</div>
 				</div>
 				<!--<div class="down"><samp></samp></div>-->
-				<iframe src="http://localhost/rect-detail-and-108/108.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
+				<iframe src="http://www.liuweibo.cn/rect-detail-and-108/108.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
 			</div>
 		</div>
 		<div id="menuPageTip">
@@ -344,12 +344,14 @@
             $("#next").click(function () {
                 var nowUrl=location.href;
                 var lastStr=nowUrl.charAt(nowUrl.length-1);
-                if(lastStr==='l')lastStr='1';
+                if(lastStr==='l' || lastStr==='/')lastStr='1';
 				var n=parseInt(lastStr)+1;
 				if(n>=8){
                     n=8;
                     $('#next').fadeOut(500);
-                    $("#menuPageTip").show();
+                    setTimeout(function () {
+                        $("#menuPageTip").show();
+                    },5000)
 				}
                 $(this).attr('href','#page'+n)
             });
