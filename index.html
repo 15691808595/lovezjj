@@ -50,10 +50,26 @@
         <!--<script src="js/3d/three.min.js"></script>-->
         <!--<script src="js/3d/tween.min.js"></script>-->
         <style>
-            #menuPage { margin: 0; padding: 0; position: fixed; left: 10px; top: 10px; list-style-type: none; z-index: 70;}
+            #menuPage { margin: 0; padding: 0; position: fixed; left: 10px; top: -30px; list-style-type: none; z-index: 70;transition: all .5s}
+			#menuPageTip{ margin: 0; padding: 0;width: 100%;height: 40px; position: fixed; left: 10px; top: 10px;display: none;}
+			#menuPageTip:hover #menuPage{top:10px;}
             #menuPage li { float: left; margin:  0 10px 0 0; font-size: 14px;}
-            #menuPage a { float: left; padding: 10px 20px; background-color: #fff; color: #333; text-decoration: none;}
-            #menuPage .active a { color: #fff; background-color: #333;}
+            #menuPage a { float: left; padding: 4px 10px; background-color: #fff; color: #333; text-decoration: none;font-size: 12px;transition: all .5s}
+            #menuPage .active a,#menuPage a:hover { color: #fff; background-color: #333;}
+			/*#menuPage a:hover{background-color: #sss}*/
+			.fixSec5{position: fixed;bottom: 100px;right: 100px;opacity: 0;display: none}
+			.fixSec5.showToggle3{animation:sec5 8s ;}
+			.fixSec5 a{color: #e04242;font-weight: bold;cursor: none}
+
+
+			@keyframes sec5 {
+				0% {opacity: 1}
+				10% {opacity: 0}
+				20% {opacity: 1}
+				40% {opacity: 0}
+				60% {opacity: 1}
+				100% {opacity: 0}
+			}
 
 			.fixBtn{
 				position: fixed;
@@ -61,10 +77,21 @@
 				right: 100px;
 			}
 			.fixBtn a{
-				color: #e502ff;
-
+				color: #b729cf;
+				font-weight: bold;
 			}
 
+			.gomyblog {
+				display:inline-block;
+				animation:lol 2s infinite;
+
+			}
+			@keyframes lol {
+				0% {transform:rotate(0deg)}
+				33% {transform:rotate(30deg)}
+				66% {transform:rotate(0deg)}
+				100% {transform:rotate(-30deg)}
+			}
 			.words p,.time-changecolor {
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
@@ -107,7 +134,7 @@
 	</head>
 
 	<body>
-		<audio src="music/beautiful.mp3" autoplay loop></audio>
+		<audio src="" autoplay loop></audio>
 		<div id="fullpage">
 			<div class="section sec1">
 				<div id="main">
@@ -162,7 +189,7 @@
 
 							<span class="STYLE1"></span><font color="#33CC00">亲爱的张静静，我们相识</font>
 
-							<span class="STYLE1">已经……</span>
+							<span class="STYLE1" style="color: #ad9494">已经……</span>
 
 							<div id="clock" class="time-changecolor"></div>
 
@@ -185,7 +212,7 @@
 					<p class="tagline changecolor">证明你在我心中的位置</p>
 					<p class="tagline changecolor">也许还不够……</P>
 				</div>
-				<div class="down"><samp></samp></div>
+				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
 				<img class="fuzzy" src="image/yejing.jpg" />
@@ -197,7 +224,7 @@
 					<p class="changecolor">那就是你要结婚了</p>
 					<p class="changecolor">我非常怕</p>
 				</div>
-				<div class="down"><samp></samp></div>
+				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
 				<img class="fuzzy" src="image/xingkong.jpg" />
@@ -208,7 +235,7 @@
 					<p class="changecolor">未来很长，希望有一双支持我的小手</p>
 					<p class="changecolor">在我累的时候，给我点个赞</p>
 				</div>
-				<div class="down"><samp></samp></div>
+				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
 				<img class="fuzzy" src="image/lufei1.jpg" />
@@ -219,7 +246,7 @@
 					<p>坚定地落在你面前</p>
 					<p>娶你做我的妻子</p>
 				</div>
-				<div class="down"><samp></samp></div>
+				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section sec2" style="overflow: hidden">
                 <div id="screen">
@@ -247,7 +274,7 @@
 					<p>但我知道</p>
 					<p>勤劳的我，总有一天好日子会来</p>
 				</div>
-				<div class="down"><samp></samp></div>
+				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
 				<img class="fuzzy" src="image/jiewen.jpg" />
@@ -257,7 +284,7 @@
 					<p class="tagline">但在我心中却不一样 </p>
 					<p class="tagline">我只对你一个人说过</p>
 				</div>
-				<div class="down"><samp></samp></div>
+				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
 				<img class="fuzzy" src="image/hangzhou.jpg" />
@@ -268,7 +295,7 @@
 					<p>去陪你一起在街道散步</p>
 					<p>去陪你一起品尝美食</p>
 				</div>
-				<div class="down"><samp></samp></div>
+				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section sec5">
 				<div class="five words">
@@ -282,23 +309,29 @@
 						<p>永远！</p>
 					</div>
 				</div>
-				<div class="down"><samp></samp></div>
+				<!--<div class="down"><samp></samp></div>-->
 				<iframe src="http://localhost/rect-detail-and-108/108.html" width="100%" height="100%" scrolling="no" frameborder="0"></iframe>
 			</div>
 		</div>
-        <ul id="menuPage">
-            <li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
-            <li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
-            <li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
-            <li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
-            <li data-menuanchor="page5"><a href="#page5">第五屏</a></li>
-            <li data-menuanchor="page6"><a href="#page6">第六屏</a></li>
-            <li data-menuanchor="page7"><a href="#page7">第七屏</a></li>
-            <li data-menuanchor="page8"><a href="#page8">第八屏</a></li>
-        </ul>
+		<div id="menuPageTip">
+
+			<ul id="menuPage" >
+				<li data-menuanchor="page1" class="active"><a href="#page1">第一屏</a></li>
+				<li data-menuanchor="page2"><a href="#page2">第二屏</a></li>
+				<li data-menuanchor="page3"><a href="#page3">第三屏</a></li>
+				<li data-menuanchor="page4"><a href="#page4">第四屏</a></li>
+				<li data-menuanchor="page5"><a href="#page5">第五屏</a></li>
+				<li data-menuanchor="page6"><a href="#page6">第六屏</a></li>
+				<li data-menuanchor="page7"><a href="#page7">第七屏</a></li>
+				<li data-menuanchor="page8"><a href="#page8">第八屏</a></li>
+			</ul>
+		</div>
 		<div class="fixBtn">
 			<!--<a id="prev" href="#page1">上一个</a>-->
-			<a id="next" href="#page2" data-letterfx="custom[0]">下一个</a>
+			<a style="display:none;"  id="next" class="gomyblog" href="#page2" data-letterfx="custom[0]">看下一个》》》</a>
+		</div>
+		<div class="fixSec5">
+			<a href="javascript:;">点击照片看看</a>
 		</div>
 
         <script src="js/love/love1.js"></script>
@@ -313,7 +346,11 @@
                 var lastStr=nowUrl.charAt(nowUrl.length-1);
                 if(lastStr==='l')lastStr='1';
 				var n=parseInt(lastStr)+1;
-				if(n>=8)n=8;
+				if(n>=8){
+                    n=8;
+                    $('#next').fadeOut(500);
+                    $("#menuPageTip").show();
+				}
                 $(this).attr('href','#page'+n)
             });
 

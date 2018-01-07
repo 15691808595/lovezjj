@@ -39,7 +39,7 @@ $(document).ready(function() {
                 });
 
                 $('.sec2').find('div.words').delay(500).animate({
-                    left: '+=1000px'
+                    left: '1000px'
                 }, 1500);
             }
             if(index == 3){
@@ -56,8 +56,17 @@ $(document).ready(function() {
                     maxSize: 22
                 });
                 $('.sec5').find('div.words').delay(500).animate({
-                    left: '+=1000px'
+                    left: '1000px'
                 }, 1500);
+            }
+            if(index==5){
+                $(".fixSec5").show().addClass('showToggle3');
+                $(".fixBtn").hide();
+                setTimeout(function () {
+                    $(".fixBtn").show();
+                },20000)
+            }
+            if(index==8){
             }
         }
     });

@@ -102,6 +102,7 @@
 
 
     canvas.click(function (e) {
+        $("audio").attr('src','music/beautiful.mp3');
         $("#font1").show();
         $(".tagline").letterfx({"fx":"swirl","timing":3000});
 
@@ -257,9 +258,15 @@
 
 
 
-        $("#code").show().typewriter();
+        $("#code").show().typewriter(function () {
+
+        });
+
 
         $("#clock-box").fadeIn(500);
+        setTimeout(function () {
+            $("#next").fadeIn(500);
+        },36000);
 
         $(".tagline").letterfx({"fx":"fly-right fly-bottom spin","backwards":true,"letter_end":"stay"});
         setTimeout(function () {
