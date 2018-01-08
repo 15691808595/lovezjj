@@ -67,6 +67,7 @@ $(document).ready(function() {
                 },20000)
             }
             if(index==8){
+                $("#sec8Iframe").attr('src','http://www.liuweibo.cn/rect-detail-and-108/108.html')
             }
         }
     });
