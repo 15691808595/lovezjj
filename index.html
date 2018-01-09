@@ -60,8 +60,24 @@
 			.fixSec5{position: fixed;bottom: 100px;right: 100px;opacity: 0;display: none}
 			.fixSec5.showToggle3{animation:sec5 8s ;}
 			.fixSec5 a{color: #e04242;font-weight: bold;cursor: none}
+			.section{overflow: hidden}
 
+			.scale-linear{transform:scale(1);filter: blur(5px);animation:scale-linear  40s linear infinite}
 
+			/*.fuzzy {*/
+				/*filter: blur(5px);*/
+				/*animation: blur-linear 4s infinite;*/
+			/*}*/
+			@keyframes scale-linear {
+				0%{transform:scale(1);filter: blur(5px);}
+				50%{transform:scale(1.2);filter: blur(0px);}
+				100%{transform:scale(1);filter: blur(5px);}
+			}
+			@keyframes blur-linear {
+				0%{blur(0px)}
+				50%{blur(5px)}
+				100%{blur(0px)}
+			}
 			@keyframes sec5 {
 				0% {opacity: 1}
 				10% {opacity: 0}
@@ -215,7 +231,7 @@
 				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
-				<img class="fuzzy" src="image/yejing.jpg" />
+				<img class="fuzzy scale-linear" src="image/yejing.jpg" />
 				<div class="words">
 					<p class="changecolor">未来很长</p>
 					<p class="changecolor">我很怕</p>
@@ -227,7 +243,7 @@
 				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
-				<img class="fuzzy" src="image/xingkong.jpg" />
+				<img class="fuzzy scale-linear" src="image/xingkong.jpg" />
 				<div class="words">
 					<p class="changecolor">虽然我知道</p>
 					<p class="changecolor">我的差距可能有点大</p>
@@ -238,7 +254,7 @@
 				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
-				<img class="fuzzy" src="image/lufei1.jpg" />
+				<img class="fuzzy scale-linear" src="image/lufei1.jpg" />
 				<div class="words">
 					<p>我在等那么一天</p>
 					<p>等我足够优秀</p>
@@ -277,7 +293,7 @@
 				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
-				<img class="fuzzy" src="image/jiewen.jpg" />
+				<img class="fuzzy scale-linear" src="image/jiewen.jpg" />
 				<div class="words">
 					<p class="tagline">一句晚安 </p>
 					<p class="tagline">可能只是一个问候语 </p>
@@ -287,7 +303,7 @@
 				<!--<div class="down"><samp></samp></div>-->
 			</div>
 			<div class="section">
-				<img class="fuzzy" src="image/hangzhou.jpg" />
+				<img class="fuzzy scale-linear" src="image/hangzhou.jpg" />
 				<div class="words">
 					<p>我想去</p>
 					<p>我想去你在的城市</p>
