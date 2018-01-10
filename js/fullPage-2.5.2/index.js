@@ -55,9 +55,6 @@ $(document).ready(function() {
                     minSize: 5,
                     maxSize: 22
                 });
-                $('.sec5').find('div.words').delay(500).animate({
-                    left: '1000px'
-                }, 1500);
             }
             if(index==5){
                 $(".fixSec5").show().addClass('showToggle3');
@@ -67,6 +64,9 @@ $(document).ready(function() {
                 },20000)
             }
             if(index==8){
+                $('.sec5').find('div.words').delay(500).animate({
+                    left: '1000px'
+                }, 1500);
                 $("#sec8Iframe").attr('src','http://www.liuweibo.cn/rect-detail-and-108/108.html')
             }
         }
